@@ -2,6 +2,7 @@ import React from "react";
 import { FaStar, FaEye } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa";
 
+import { FaShareAlt } from "react-icons/fa";
 
 const NewsCard = ({ news }) => {
   const {
@@ -14,10 +15,10 @@ const NewsCard = ({ news }) => {
   } = news;
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden border">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden ">
       
       {/* Header */}
-      <div className="flex items-center gap-3 p-4">
+      <div className="flex items-center gap-3 p-4 bg-base-200">
         <img
           src={author.img}
           alt={author.name}
@@ -29,8 +30,9 @@ const NewsCard = ({ news }) => {
             {new Date(author.published_date).toLocaleDateString()}
           </p>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-5 items-center">
             <FaBookmark />
+            <FaShareAlt />
         </div>
       </div>
 
