@@ -6,6 +6,7 @@ import Home from "../Pages/Home";
 import CategoryNews from "../Pages/CategoryNews";
 
 
+
 const router = createBrowserRouter([
       {
        path:"/",
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
             },
             {
                   path:'/category/:id',
-                  element:<CategoryNews></CategoryNews>
+                  element:<CategoryNews></CategoryNews>,
+                  loader:()=>fetch("/public/news.json"),
             }
        ]
       },
