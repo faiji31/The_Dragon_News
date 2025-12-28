@@ -1,5 +1,7 @@
 import React from "react";
 import { FaStar, FaEye } from "react-icons/fa";
+import { FaBookmark } from "react-icons/fa";
+
 
 const NewsCard = ({ news }) => {
   const {
@@ -26,6 +28,9 @@ const NewsCard = ({ news }) => {
           <p className="text-sm text-gray-500">
             {new Date(author.published_date).toLocaleDateString()}
           </p>
+        </div>
+        <div className="flex justify-between">
+            <FaBookmark />
         </div>
       </div>
 
