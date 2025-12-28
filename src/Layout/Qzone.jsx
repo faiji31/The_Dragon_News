@@ -6,7 +6,7 @@ const Qzone = () => {
       return (
             <div className='bg-base-200 p-3'>
                   <h3 className='font-bold mb-10'>Qzone</h3>
-                  <div>
+                  <div className='space-y-5'>
                     <img src={Swim} alt="" />
                       <img src={Play} alt="" />
                         <img src={Class} alt="" />
