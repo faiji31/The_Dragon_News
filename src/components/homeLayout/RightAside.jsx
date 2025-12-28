@@ -1,9 +1,10 @@
 import React from 'react';
+import SocialLayout from '../../Layout/SocialLayout';
 
 const RightAside = () => {
       return (
             <div>
-                  Right Aside
+                  <SocialLayout></SocialLayout>
             </div>
       );
 };
