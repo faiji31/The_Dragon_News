@@ -3,6 +3,7 @@ import { FaStar, FaEye } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa";
 
 import { FaShareAlt } from "react-icons/fa";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
   const {
@@ -11,7 +12,7 @@ const NewsCard = ({ news }) => {
     details,
     total_view,
     rating,
-    author,
+    author, id
   } = news;
 
   return (
@@ -53,9 +54,9 @@ const NewsCard = ({ news }) => {
       {/* Description */}
       <p className="px-4 text-gray-600 text-sm">
         {details.slice(0, 180)}...
-        <span className="text-red-500 font-semibold cursor-pointer ml-1">
+        <Link to={`/news-details/${id}`} className="text-red-500 font-semibold cursor-pointer ml-1">
           Read More
-        </span>
+        </Link>
       </p>
 
       {/* Footer */}
